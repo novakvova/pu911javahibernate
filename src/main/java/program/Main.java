@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        Scanner in = new Scanner(System.in);
+        Scanner in = new Scanner(System.in, "UTF-8");
         System.out.println("Enter role name:");
         Role role = new Role();
         role.setName(in.nextLine());
