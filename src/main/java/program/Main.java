@@ -23,7 +23,7 @@ public class Main {
         List<Role> roles = query.list();
         System.out.println("Roles list: ");
         for (Object item : roles)
-            System.out.println(role);
+            System.out.println(item);
         session.close();
     }
 }
