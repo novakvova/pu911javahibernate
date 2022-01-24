@@ -4,11 +4,13 @@ import org.hibernate.Session;
 import org.hibernate.query.Query;
 import utils.HibernateSessionFactoryUtil;
 
+import java.io.PrintStream;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
+        System.setOut(new PrintStream(System.out, true, "UTF-8"));
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         Scanner in = new Scanner(System.in, "UTF-8");
         System.out.println("Enter role name:");
